@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:table="sap.ui.table" xmlns="sap.m">
+    <Column id="FioriTools::ArtigoExtension">
+        <Text text="Detalhes"/>
+        <customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ArtigoExtension&quot;, &quot;columnIndex&quot;: &quot;1&quot;, &quot;leadingProperty&quot;: &quot;Matnr&quot;}"/>
+        </customData>
+    </Column>
+    <Column id="FioriTools::ItemDetail" width="10%" hAlign="Center">
+        <Text text="Artigo/Combinação"/>
+        <customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;ItemDetail&quot;, &quot;columnIndex&quot;: &quot;0&quot;, &quot;leadingProperty&quot;: &quot;Matnr&quot;}"/>
+        </customData>
+    </Column>
+</core:FragmentDefinition>

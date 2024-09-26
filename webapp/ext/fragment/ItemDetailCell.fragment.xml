@@ -1,0 +1,62 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.f"
+    xmlns:cards="sap.f.cards"
+    xmlns:lf="sap.ui.layout.form">
+
+    <VBox >
+        <Carousel id="carousel" ariaLabelledBy="carouselTitle" height="auto" pages="{to_infomat}" visible="{path: 'Img', formatter: '.isCarVisible'}">
+            <customLayout>
+                <CarouselLayout visiblePagesCount="{props>/qtdCar}"/>
+            </customLayout>
+            <ScrollContainer vertical="false" horizontal="false" class="sapUiContentPadding">
+                <f:Card>
+                    <f:header>
+                        <cards:Header title="{TagStill}" iconDisplayShape="Square"/>
+                    </f:header>
+                    <f:content>
+                        <l:VerticalLayout class="sapUiContentPadding" width="100%">
+                            <l:BlockLayout>
+                                <l:BlockLayoutRow>
+                                    <l:BlockLayoutCell width="1">
+                                        <HBox class="sapUiSmallMarginBottom">
+                                            <Image src="/sap/opu/odata/sap/API_CV_ATTACHMENT_SRV/AttachmentContentSet(DocumentInfoRecordDocType='{Dokar}',DocumentInfoRecordDocNumber='{Doknr}',DocumentInfoRecordDocVersion='{Dokvr}',DocumentInfoRecordDocPart='{Doktl}',LogicalDocument='{LogicalDoc}',ArchiveDocumentID='{FisicalDoc}',LinkedSAPObjectKey='{LinkObj}',BusinessObjectTypeName='DRAW')/$value" width="auto"/>
+                                        </HBox>
+                                        <HBox class="sapUiSmallMarginBottom">
+                                            <Text text=" Tamanho: {Tamanho}"/>
+                                        </HBox>
+                                        <HBox class="sapUiSmallMarginBottom">
+                                            <Text text=" Descrição: {DescMat}"/>
+                                        </HBox>
+                                        <HBox>
+                                            <Link text="Parte A: {Parte_A}" class="sapUiSmallMarginEnd" press="onLinkClick" visible="{path: 'Parte_A', formatter: '.isFieldVisible'}"/>
+                                            <Link text="Parte B: {Parte_B}" class="sapUiSmallMarginEnd" press="onLinkClick" visible="{path: 'Parte_B', formatter: '.isFieldVisible'}"/>
+                                            <Link text="Parte C: {Parte_C}" class="sapUiSmallMarginEnd" press="onLinkClick" visible="{path: 'Parte_C', formatter: '.isFieldVisible'}"/>
+                                        </HBox>
+                                        <HBox>
+                                            <Link text="Parte D: {Parte_D}" class="sapUiSmallMarginEnd" press="onLinkClick" visible="{path: 'Parte_D', formatter: '.isFieldVisible'}"/>
+                                            <Link text="Parte E: {Parte_E}" class="sapUiSmallMarginEnd" press="onLinkClick" visible="{path: 'Parte_E', formatter: '.isFieldVisible'}"/>
+                                            <Link text="Parte F: {Parte_F}" class="sapUiSmallMarginEnd" press="onLinkClick" visible="{path: 'Parte_F', formatter: '.isFieldVisible'}"/>
+                                            <Link text="Parte G: {Parte_G}" class="sapUiSmallMarginEnd" press="onLinkClick" visible="{path: 'Parte_G', formatter: '.isFieldVisible'}"/>
+                                        </HBox>
+                                        <HBox>
+                                            <Button text="Administrar dados mestre do produto" class="sapUiSmallMarginEnd"  press="goToMaintain($event, ${Objky})"/>
+                                        </HBox>
+
+                                    </l:BlockLayoutCell>
+                                </l:BlockLayoutRow>
+                            </l:BlockLayout>
+                        </l:VerticalLayout>
+                    </f:content>
+                </f:Card>
+            </ScrollContainer>
+
+        </Carousel>
+
+    </VBox>
+
+
+    <Link text="{Matnr}" press="onMatnrClick"/>
+
+</core:FragmentDefinition>

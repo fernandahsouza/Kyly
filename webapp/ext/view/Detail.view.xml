@@ -1,0 +1,45 @@
+<mvc:View
+    controllerName="com.kyly.catalogo4.ext.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+
+    <Page
+        id="detailPage"
+        title="{i18n>detailPageTitle}"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+
+        <content>
+            <f:SimpleForm
+                id="detailForm"
+                editable="false"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false">
+
+                <!-- Add form fields here to display the detail data -->
+                <f:content>
+                    <Label text="{i18n>titleLabel}" />
+                    <Text text="{/title}" />
+
+                    <Label text="{i18n>descriptionLabel}" />
+                    <Text text="{/description}" />
+
+                    <!-- Add more fields as needed -->
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Popover id="myPopOver2" class="sapUIContentPadding" title="{Objky}">
+
+
+        <HBox class="sapUiSmallMarginBottom">
+            <List id="invoiceList" class="sapUiResponsiveMargin" width="auto" items="{to_varmat}">
+                <items>
+                    <ObjectListItem title="{Matnr}" press="onObjectListItemPress" type="Active">
+                    </ObjectListItem>
+                </items>
+            </List>
+        </HBox>
+
+        <VBox >
+            <Button text="ok" width="230px" press="onCloseFragment" class="sapUiSmallMarginBottom" ariaHasPopup="Dialog" />
+        </VBox>
+
+    </Popover>
+
+</core:FragmentDefinition>

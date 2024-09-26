@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core" controller="com.kyly.catalogo4.controller.Detail">
+
+    <Popover id="myPopOver" class="sapUIContentPadding" title="{Parte_A}" >
+
+        <HBox class="sapUiSmallMarginBottom">
+            <Image src="/sap/opu/odata/sap/API_CV_ATTACHMENT_SRV/AttachmentContentSet(DocumentInfoRecordDocType='{Dokar}',DocumentInfoRecordDocNumber='{Doknr}',DocumentInfoRecordDocVersion='{Dokvr}',DocumentInfoRecordDocPart='{Doktl}',LogicalDocument='{LogicalDoc}',ArchiveDocumentID='{FisicalDoc}',LinkedSAPObjectKey='{LinkObj}',BusinessObjectTypeName='DRAW')/$value" width="100%" />
+        </HBox>
+
+    </Popover>
+
+</core:FragmentDefinition>
